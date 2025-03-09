@@ -8,15 +8,15 @@
 <body>
     <h2>Shopping Cart</h2>
     
-    <label for="item1">Price of Item 1 ($):</label>
+    <label for="item1">Price of Item 1 Rs:</label>
     <input type="number" id="item1"><br><br>
 
-    <label for="item2">Price of Item 2 ($):</label>
+    <label for="item2">Price of Item 2 Rs:</label>
     <input type="number" id="item2"><br><br>
 
     <button onclick="calculateTotal()">Calculate Total</button>
 
-    <h3>Total Price: $<span id="total"></span></h3>
+    <h3>Total Price: Rs <span id="total"></span></h3>
 
     <script>
         function calculateTotal() {
@@ -31,7 +31,7 @@
             let totalPrice = subtotal + tax;
 
             // Displaying the total price
-            document.getElementById("total").innerText = totalPrice.toFixed(2);
+            document.getElementById("total").innerText = totalPrice;
         }
     </script>
 </body>
