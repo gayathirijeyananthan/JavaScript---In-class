@@ -17,12 +17,12 @@
 
     <button onclick="calculateTotal()">Calculate Total</button>
 
-    <p id="total">Total amount is: Rs </p>
+    <p>Total amount is: Rs <span id="total"></span> </p>
 
     <script>
         function calculateTotal() {
-            let item1 = document.getElementById('item1').value;
-            let item2 = document.getElementById('item2').value;
+            let item1 = Number(document.getElementById('item1').value);
+            let item2 = Number(document.getElementById('item2').value);
 
             let Total = item1+item2;
 
