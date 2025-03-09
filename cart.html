@@ -1,38 +1,35 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping cart</title>
+    <title>Document</title>
 </head>
 
 <body>
-    <h1>Shopping cart for calculating total proce for products</h1>
-
-    <label for="item 1">Item 1 Rs:</label>
+    <h1>Shopping cart</h1>
+    <label for="item1">Item 1 RS:</label>
     <input type="number" id="item1"><br><br>
 
-    <label for="item 2">Item 2 Rs:</label>
+    <label for="item2">Item 2 RS:</label>
     <input type="number" id="item2"><br><br>
 
     <button onclick="calculateTotal()">Calculate Total</button>
 
-    <h2 >Total price Rs: <span id="total"></span></h2>
+    <p id="total">Total amount is: Rs </p>
 
     <script>
-        function calculateTotal(){
-                 let item1=Number(document.getElementById('item1').value);
-                 let item2=Number(document.getElementById('item2').value);
-                 const taxRate=0.1;
+        function calculateTotal() {
+            let item1 = document.getElementById('item1').value;
+            let item2 = document.getElementById('item2').value;
 
-                 let subTotal= item1+item2;
-                 let tax = subTotal*0.1;
-                 let total = subTotal+tax;
+            let Total = item1+item2;
 
-                 document.getElementById('total').innerText(total);
+            document.getElementById('total').innerHTML = (Total);
+
+
+
         }
 
 
@@ -40,43 +37,3 @@
 </body>
 
 </html>
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart</title>
-</head>
-<body>
-    <h2>Shopping Cart</h2>
-    
-    <label for="item1">Price of Item 1 Rs:</label>
-    <input type="number" id="item1"><br><br>
-
-    <label for="item2">Price of Item 2 Rs:</label>
-    <input type="number" id="item2"><br><br>
-
-    <button onclick="calculateTotal()">Calculate Total</button>
-
-    <h3>Total Price: Rs <span id="total"></span></h3>
-
-    <script>
-        function calculateTotal() {
-            // Declaring variables
-            let price1 = Number(document.getElementById("item1").value);
-            let price2 = Number(document.getElementById("item2").value);
-            const taxRate = 0.1; // 10% tax
-
-            // Calculating total price with tax
-            let subtotal = price1 + price2;
-            let tax = subtotal * taxRate;
-            let totalPrice = subtotal + tax;
-
-            // Displaying the total price
-            document.getElementById("total").innerText = totalPrice;
-        }
-    </script>
-</body>
-</html> -->
