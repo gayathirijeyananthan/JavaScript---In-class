@@ -1,4 +1,48 @@
+
+
 <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping cart</title>
+</head>
+
+<body>
+    <h1>Shopping cart for calculating total proce for products</h1>
+
+    <label for="item 1">Item 1 Rs:</label>
+    <input type="number" id="item1"><br><br>
+
+    <label for="item 2">Item 2 Rs:</label>
+    <input type="number" id="item2"><br><br>
+
+    <button onclick="calculateTotal()">Calculate Total</button>
+
+    <h2 >Total price Rs: <span id="total"></span></h2>
+
+    <script>
+        function calculateTotal(){
+                 let item1=Number(document.getElementById('item1').value);
+                 let item2=Number(document.getElementById('item2').value);
+                 const taxRate=0.1;
+
+                 let subTotal= item1+item2;
+                 let tax = subTotal*0.1;
+                 let total = subTotal+tax;
+
+                 document.getElementById('total').innerText(total);
+        }
+
+
+    </script>
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -35,4 +79,4 @@
         }
     </script>
 </body>
-</html>
+</html> -->
