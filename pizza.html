@@ -1,0 +1,60 @@
+<!-- Can use to Object -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pizza</title>
+</head>
+
+<body>
+    <label for="pizza count">Count of Pizza:</label>
+    <input type="number" id="count">
+
+    <label for="size">Select Size:</label>
+    <select id="size">
+        <option value="small">Small</option>
+        <option value="Medium">Medium</option>
+        <option value="Large">Large</option>
+    </select><br><br>
+
+    <button onclick="pizza()">Confirm Order</button>
+
+    <p>Total : <span id='total'></span></p>
+
+    <script>
+
+        function pizza() {
+
+            let count = Number(document.getElementById('count').value);
+            let size = document.getElementById('size').value;
+
+            let medium = 300;
+            let large = 500;
+            let small = 100;
+
+
+            if (size == 'Small') {
+                let total =
+                    document.getElementById('total').innerText = (small * count);
+            }
+            else if (size == 'Medium') {
+                let total =
+                    document.getElementById('total').innerText = (medium * count);
+            }
+
+            else {
+                let total =
+                    document.getElementById('total').innerText = (large * count);
+            }
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>
