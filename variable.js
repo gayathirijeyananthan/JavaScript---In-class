@@ -10,7 +10,7 @@ document.write('My age is'+' '+age);
 //step4
 
 if (age<18){
-    console.log('You cant loged in');
+    console.log("You can't loged in");
 }
 else{
     console.log('You can logged in');
